@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Qualifications</title>
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 30px;
+    background: 
+        url('image/1106.jpg') no-repeat center center fixed, 
+        url('image/c.jpg') no-repeat center center fixed; 
+    background-size: cover, cover;
+    position: relative;
+    color: #fff;
+}
+
+/* Overlay effect for better readability */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: -1;
+}
+
+
+        .education-header {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        .education-item {
+            display: flex;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            gap: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .education-item img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .education-item h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #4caf50;
+        }
+        .education-item p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+        .education-item span {
+            font-weight: bold;
+            color: #fff;
+        }
+        .navigation-arrows {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .arrow {
+            font-size: 2rem;
+            background-attachment: fixed;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.7);
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+        .arrow:hover {
+            transform: scale(1.2);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        /* Home Button (Replaces Right Arrow) */
+        .home-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            font-size: 24px;
+            background: #00c3ff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0px 0px 10px rgba(0, 195, 255, 0.6);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .home-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 15px rgba(0, 195, 255, 1);
+        }
+    </style>
+</head>
+<body>
+    <div class="education-header">
+        <h2>Education Qualifications</h2>
+    </div>
+    <div class="education-item">
+        <img src="image/svhec.png" alt="University">
+        <div>
+            <h3>ARTIFICIAL INTELLIGENCE AND DATA SCIENCE</h3>
+            <p><span>Institution:</span> Shree Venkateshwara Hi-Tech Engineering College,Gobi</p>
+            <p><span>Year:</span> 2023 - 2027</p>
+        </div>
+    </div>
+    <div class="education-item">
+        <img src="image/ssvms.JPG" alt="High School">
+        <div>
+            <h3>Secondary School Certificate (SSC)</h3>
+            <p><span>Institution:</span> Sri saraswathi matric school,vellore </p>
+            <p><span>Year:</span> 2020 - 2021</p>
+        </div>
+    </div>
+    <div class="education-item">
+        <img src="image/ssvms.JPG" alt="SSC">
+        <div>
+            <h3>Higher Secondary Education (HSE)</h3>
+            <p><span>Institution:</span> Sri saraswathi matric school,vellore</p>
+            <p><span>Year:</span> 2022 - 2023</p>
+            <p><span>Grade:</span> 62.5%</p>
+        </div>
+    </div>
+    <div class="navigation-arrows">
+        <a href="skill.html" class="arrow">←</a>    
+    </div>
+
+        <!-- Home Button (🏠) -->
+    <button class="home-btn" onclick="navigateToHome()">🏠</button>
+
+    <script>
+        function navigateToHome() {
+            window.location.href = 'index.html'; // Change this to your actual home page
+        }
+</script>
+</body>
+</html>

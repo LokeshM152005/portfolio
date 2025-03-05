@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('image/sarjan.jpg') no-repeat center center/cover;
+            background-attachment: fixed;
+            overflow-x: hidden;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 100px; /* Increased distance */
+            padding-top: 50px;
+        }
+
+        .skill-card {
+            display: flex;
+            align-items: center;
+            gap: 50px; /* Increased spacing between image and text */
+            text-align: center;
+            width: 80%;
+            justify-content: center;
+            position: relative;
+        }
+
+        .skill-card:nth-child(odd) {
+            flex-direction: row;
+            left: -50px;
+        }
+
+        .skill-card:nth-child(even) {
+            flex-direction: row-reverse;
+            left: 50px;
+        }
+
+        .skill-card img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .skill-card img:hover {
+            transform: scale(1.1);
+        }
+
+        .skill-card h3 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        /* Navigation Arrows */
+        .arrow {
+            position: fixed;
+            bottom: 20px;
+            width: 70px;
+            height: 70px;
+            background-color: rgba(255, 255, 255, 0.5);
+            color: #000;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        .arrow:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .left-arrow {
+            left: 20px;
+        }
+
+        .right-arrow {
+            right: 20px;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="skill-card">
+        <img src="image/html5.jpg" alt="HTML">
+        <h3>ℍ𝕋𝕄𝕃 </h3>
+    </div>
+    <div class="skill-card">
+        <img src="image/css 8.jpeg" alt="CSS">
+        <h3>ℭ𝗦𝗦</h3>
+    </div>
+    <div class="skill-card">
+        <img src="image/java 3.png" alt="Java">
+        <h3>𝓙𝓐𝓥𝓐</h3>
+    </div>
+   
+    <div class="skill-card">
+        <img src="image/py1.jpg" alt="Python">
+        <h3>𝓟𝓨𝓣𝓗𝓞𝓝</h3>
+    </div>
+    <div class="skill-card">
+        <img src="image/mysql11.png" alt="MYSQL">
+        <h3>𝓜𝓨𝓢𝓠𝓛 </h3>
+    </div>
+
+    <center>
+        <footer>@2025 All rights reserved in Lokii</footer>
+    </center>
+
+    <!-- Left Arrow Button -->
+    <button class="arrow left-arrow" onclick="navigateToEducation()">←</button>
+
+    <!-- Right Arrow Button -->
+    <button class="arrow right-arrow" onclick="navigateToContact()">→</button>
+
+    <script>
+        // Navigation for arrows
+        function navigateToEducation() {
+            window.location.href = 'index.html';
+        }
+
+        function navigateToContact() {
+            window.location.href = 'qualification.html';
+        }
+    </script>
+</body>
+</html>

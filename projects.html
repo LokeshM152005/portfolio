@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        /* Project Popup Styling */
+        #projects {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+            z-index: 1001;
+            border: 3px solid rgba(0, 195, 255, 0.7);
+            opacity: 0;
+            animation: fadeIn 0.5s ease-out forwards, slideDown 0.5s ease-out forwards;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideDown {
+            from { transform: translate(-50%, -60%); }
+            to { transform: translate(-50%, -50%); }
+        }
+
+        /* Project List Styling */
+        .project-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+
+        .project-list li {
+            margin: 12px 0;
+        }
+
+        .project-list a {
+            color: #00c3ff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+            transition: color 0.3s, transform 0.3s;
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 8px;
+        }
+
+        .project-list a:hover {
+            color: #ffcc00;
+            transform: scale(1.1);
+            text-shadow: 0px 0px 10px rgba(255, 204, 0, 0.8);
+        }
+
+        /* Close Button */
+        .close-btn {
+            margin-top: 15px;
+            padding: 10px 18px;
+            background: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .close-btn:hover {
+            background: darkred;
+            transform: scale(1.1);
+            box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.7);
+        }
+
+        /* Show Projects Button */
+        .show-projects-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px 40px;
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #ff007f, #ff00ff);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0px 0px 20px rgba(255, 0, 127, 0.8);
+            transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+            animation: pulse 1.5s infinite alternate;
+        }
+
+        /* Button Hover Effect */
+        .show-projects-btn:hover {
+            transform: scale(1.15);
+            box-shadow: 0px 0px 25px rgba(255, 0, 127, 1);
+            background: linear-gradient(135deg, #ff00ff, #ff007f);
+        }
+
+        /* Button Animation */
+        @keyframes pulse {
+            from {
+                box-shadow: 0px 0px 20px rgba(255, 0, 127, 0.8);
+            }
+            to {
+                box-shadow: 0px 0px 35px rgba(255, 0, 127, 1);
+            }
+        }
+
+        /* Home Button (Replaces Right Arrow) */
+        .home-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            font-size: 24px;
+            background: #00c3ff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0px 0px 10px rgba(0, 195, 255, 0.6);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .home-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 15px rgba(0, 195, 255, 1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Show Projects Button -->
+    <button class="show-projects-btn" onclick="showProjects()">Show My Projects</button>
+
+    <!-- Projects Popup -->
+    <div id="projects">
+        <h2>My Projects</h2>
+        <ul class="project-list">
+            <li><a href="https://github.com/yourusername/project1" target="_blank">E-COMMERCE</a></li>
+            <li><a href="https://github.com/yourusername/project2" target="_blank">WEATHER ANALYSIS</a></li>
+            <li><a href="https://github.com/yourusername/project3" target="_blank">CHAT APPLICATION</a></li>
+            <li><a href="https://github.com/yourusername/project4" target="_blank">CHATBOT</a></li>
+        </ul>
+        <button class="close-btn" onclick="closeProjects()">Close</button>
+    </div>
+
+    <!-- Home Button (🏠) -->
+    <button class="home-btn" onclick="navigateToHome()">🏠</button>
+
+    <script>
+        function navigateToHome() {
+            window.location.href = 'index.html'; // Change this to your actual home page
+        }
+
+        function showProjects() {
+            const projects = document.getElementById("projects");
+            projects.style.display = "block";
+        }
+
+        function closeProjects() {
+            const projects = document.getElementById("projects");
+            projects.style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
